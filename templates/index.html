@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IP Address Information</title>
+    <style>
+        body {
+            background-color: yellow;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Public IP Address Information</h1>
+    {% if ip_info %}
+        {% for key, value in ip_info.items() %}
+            <p>{{ key }}: {{ value }}</p>
+        {% endfor %}
+    {% else %}
+        <p>Failed to retrieve IP information.</p>
+    {% endif %}
+</body>
+</html>
