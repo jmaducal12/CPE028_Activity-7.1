@@ -24,6 +24,9 @@
             <p>{{ key }}: {{ value }}</p>
         {% endfor %}
       <a href="/export_pdf">Export as PDF</a>
+      <div id="map">
+            <iframe width="400" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q={{ ip_info['Latitude'] }},{{ ip_info['Longitude'] }}&z=14&output=embed"></iframe>
+      </div>
     {% else %}
         <p>Failed to retrieve IP information.</p>
     {% endif %}
